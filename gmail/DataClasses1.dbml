@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="gmaiil" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=gmaiil;Integrated Security=True" SettingsObjectName="gmail.Properties.Settings" SettingsPropertyName="gmaiilConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.compte" Member="compte">
+    <Type Name="compte">
+      <Column Name="email" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="prenom" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mdps" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sexe" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="daten" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="qs" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="qr" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="img" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="compte_msg" Member="msg" ThisKey="email" OtherKey="adrdes" Type="msg" />
+      <Association Name="compte_msg1" Member="msg1" ThisKey="email" OtherKey="adrexp" Type="msg" />
+    </Type>
+  </Table>
+  <Table Name="dbo.msg" Member="msg">
+    <Type Name="msg">
+      <Column Name="idm" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="adrexp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="adrdes" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="corps" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="objet" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="important" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="datemsg" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="lu" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="supex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="supdes" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="img" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="important1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lu1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="compte_msg" Member="compte" ThisKey="adrdes" OtherKey="email" Type="compte" IsForeignKey="true" />
+      <Association Name="compte_msg1" Member="compte1" ThisKey="adrexp" OtherKey="email" Type="compte" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

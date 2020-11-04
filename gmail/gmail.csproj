@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D09BC5A-1918-42D0-A9DA-65286E2617C9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gmail</RootNamespace>
+    <AssemblyName>gmail</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accueil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Accueil.Designer.cs">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="afficher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="afficher.Designer.cs">
+      <DependentUpon>afficher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoiteReception.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BoiteReception.Designer.cs">
+      <DependentUpon>BoiteReception.cs</DependentUpon>
+    </Compile>
+    <Compile Include="byby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="byby.Designer.cs">
+      <DependentUpon>byby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataClasses1.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Gmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gmail.Designer.cs">
+      <DependentUpon>Gmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inscription.Designer.cs">
+      <DependentUpon>inscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lesinfomsg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Lesinfomsg.Designer.cs">
+      <DependentUpon>Lesinfomsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdpoublie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdpoublie.Designer.cs">
+      <DependentUpon>mdpoublie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nouveaumsg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Nouveaumsg.Designer.cs">
+      <DependentUpon>Nouveaumsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profil.Designer.cs">
+      <DependentUpon>Profil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign.Designer.cs">
+      <DependentUpon>Sign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transferer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transferer.Designer.cs">
+      <DependentUpon>Transferer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="afficher.resx">
+      <DependentUpon>afficher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="byby.resx">
+      <DependentUpon>byby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdpoublie.resx">
+      <DependentUpon>mdpoublie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profil.resx">
+      <DependentUpon>Profil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transferer.resx">
+      <DependentUpon>Transferer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Accueil.resx">
+      <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoiteReception.resx">
+      <DependentUpon>BoiteReception.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gmail.resx">
+      <DependentUpon>Gmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inscription.resx">
+      <DependentUpon>inscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lesinfomsg.resx">
+      <DependentUpon>Lesinfomsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nouveaumsg.resx">
+      <DependentUpon>Nouveaumsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sign.resx">
+      <DependentUpon>Sign.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Inbox_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Open Envelope_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Eye_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Team_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Save_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Gmail_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_52px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Inbox_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_New_Message_50px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Love_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Sent_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Print_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_More_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Envelope_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Trash_Can_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Love_52px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Heart_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Data Transfer_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Attach_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Attach_50px1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User Group Man Woman_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add User Group Woman Man_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Communication_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chat_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_New_48px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\index.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Chat_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Party_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Transfer_50px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_Communicate_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images129.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exit Sign_52px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
